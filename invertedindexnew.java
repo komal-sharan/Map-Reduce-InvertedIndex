@@ -7,13 +7,37 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+
+
+
+
+
 public class invertedindex {
 
 	public static HashMap<String, ArrayList<String>> h = new HashMap<String, ArrayList<String>>();
 	public static HashMap<String, String> mapping = new HashMap<String, String>();
 	public static HashMap<String, String> mappingtweetoId = new HashMap<String, String>();
+	public static ArrayList<String> listoftweet(String query)
+	{
+		return h.get(query);
+		
+		
+		
+	}
 	
-	 public static void main(String[] args) {
+	
+	public static int  frequecyOfword(String query)
+	{
+		int frequency=0;
+	 if(query!=null)	
+     frequency=h.get(query).size();
+     return frequency;
+		
+		
+		
+	}
+	
+	public static void indexBuilder() {
 		
 		int tweetid = 0;
 		String csvFile = "/Users/komalsharan/Downloads/data.csv";
@@ -79,7 +103,7 @@ public class invertedindex {
 
 			}
 			for (HashMap.Entry<String, ArrayList<String>> entry : h.entrySet()) {
-				System.out.println(entry.getKey() + " : " + entry.getValue());
+				//System.out.println(entry.getKey() + " : " + entry.getValue());
 			}
 			
 
@@ -100,5 +124,17 @@ public class invertedindex {
      }
 
  }
+	
+	
+	 
+	 
+	 public static void main(String[] args){
+           //invertedindex obj=null;
+		     indexBuilder();
+		     String query="Trump";
+           System.out.println(frequecyOfword(query));
+
+	 }
+	 
 
 }
