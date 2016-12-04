@@ -1,0 +1,12 @@
+Result of inverted index on a dataset
+word            
+
+WORD     LIST OF TWEETIDS having it(can get the size of these lists)
+
+Clinton : [3]
+Three : [7]
+Trump : [1, 3, 7, 12, 15]
+DailyCaller : [7]
+Truly : [2]
+she : [2]
+
