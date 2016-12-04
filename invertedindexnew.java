@@ -9,10 +9,12 @@ import java.util.HashMap;
 
 public class invertedindex {
 
-	public static void main(String[] args) {
-		HashMap<String, ArrayList<String>> h = new HashMap<String, ArrayList<String>>();
-		HashMap<String, String> mapping = new HashMap<String, String>();
-		HashMap<String, String> mappingtweetoId = new HashMap<String, String>();
+	public static HashMap<String, ArrayList<String>> h = new HashMap<String, ArrayList<String>>();
+	public static HashMap<String, String> mapping = new HashMap<String, String>();
+	public static HashMap<String, String> mappingtweetoId = new HashMap<String, String>();
+	
+	 public static void main(String[] args) {
+		
 		int tweetid = 0;
 		String csvFile = "/Users/komalsharan/Downloads/data.csv";
 		BufferedReader br = null;
